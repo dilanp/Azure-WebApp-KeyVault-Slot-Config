@@ -1,0 +1,12 @@
+1 - Two Azure Key Vaults are setup for 2 slots to store application settings of the two slots.
+	* MvcMovieSlots
+	* MvcMovieSlots-Staging
+	Each Key Vault contains only one secret - ConnectionString, with a slot specific secret value.
+    A "Secret Management" access policy has been setup to the relevant slot's managed identity to list/read Key vault secret.
+
+2 - Staging slot website is setup with GitHub CI/CD deployment model. 
+    Stage slot was created by copying the Production slot.
+	production slot has no deployment model as getting to Production is only available through swapping slot with Staging.
+	Both slot websites have Managed Identity enabled so, that they could be setup with Key Vault access permissions.
+
+3 - 

@@ -1,0 +1,16 @@
+﻿@using MvcMovie.Dates;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <br />
+    <ul>
+        <li>Days since Independance Day: @DateManager.DaysSince(DateManager.AmericanIndependanceDay)</li>
+        <li>Days since the Titanic sank: @DateManager.DaysSince(DateManager.TitanicSank)</li>
+        <li>Days since the Battle of Hastings: @DateManager.DaysSince(DateManager.BattleOfHastings)</li>
+    </ul>
+</div>
